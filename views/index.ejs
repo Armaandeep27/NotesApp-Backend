@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+  </head>
+  <body>
+    <form class="upper" method="post" action="/create">
+      <input
+        type="text"
+        name="title"
+        class="input-title"
+        placeholder="Input Title"
+      />
+      <textarea
+        name="details"
+        class="input-details"
+        placeholder="Input Details"
+      ></textarea>
+      <input class="append-button" type="submit" value="Commit task" />
+    </form>
+
+    <div class="bottom">
+
+    <% if(files.length == 0) { %>
+      <h1>
+        Create some notes
+      </h1>
+    <% } %>
+    <% files.forEach( (val) => { %> 
+      <div class="child">
+        <h1><%= val %></h1>
+        <a href="/files/<%=val %>">Read This</a>
+        <a href="/edit/<%=val %>">Edit Name</a>
+      </div>
+    <%  }) %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+</head>
+<body>
+
+    <form class="upper" method="post" action="/edit">
+      <input
+        type="text"
+        name="old"
+        class="input-title"
+        value = <%= filename%>
+        placeholder ="Old Name"
+      />  
+      <input
+        type="text"
+        name="new"
+        class="input-title"
+        placeholder="New Name"
+      />
+      <input class="append-button" type="submit" value="Commit task" />
+    </form>
+</body>
+</html>
