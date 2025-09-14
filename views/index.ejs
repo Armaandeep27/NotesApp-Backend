@@ -23,19 +23,15 @@
     </form>
 
     <div class="bottom">
-
-    <% if(files.length == 0) { %>
-      <h1>
-        Create some notes
-      </h1>
-    <% } %>
-    <% files.forEach( (val) => { %> 
+      <% if (files.length === 0) { %>
+      <h1>Create some notes</h1>
+      <% } else { %> <% files.forEach((val) => { %>
       <div class="child">
         <h1><%= val %></h1>
-        <a href="/files/<%=val %>">Read This</a>
-        <a href="/edit/<%=val %>">Edit Name</a>
+        <a href="/files/<%= val %>">Read This</a>
+        <a href="/edit/<%= val %>">Edit Name</a>
       </div>
-    <%  }) %>
+      <% }) %> <% } %>
     </div>
   </body>
 </html>

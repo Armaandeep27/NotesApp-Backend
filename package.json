@@ -1,7 +1,7 @@
 {
   "name": "practice-proj",
   "version": "1.0.0",
-  "description": "",
+  "description": "step 1: You should have node installed on your desktop\r step 2: npm init -y\r step 3: install express and ejs\r step 4: node index.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
